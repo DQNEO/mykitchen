@@ -93,6 +93,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
 
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = ["cookbooks","site-cookbooks"]
+    chef.add_recipe "yumfastestmirror"
+    chef.add_recipe "git"
+
+    # You may also specify custom JSON attributes:
+    chef.json = { :git => {:version => "1.9.0"} }
+  end
+
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
