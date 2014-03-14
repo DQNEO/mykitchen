@@ -99,6 +99,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "git"
     chef.add_recipe "remi"
     chef.add_recipe "base"
+    chef.add_recipe "base::php55"
 
     # You may also specify custom JSON attributes:
     chef.json = { :git => {:version => "1.9.0"} }
