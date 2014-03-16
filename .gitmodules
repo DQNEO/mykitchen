@@ -1,3 +1,6 @@
 [submodule "site-cookbooks/git"]
 	path = site-cookbooks/git
 	url = git@github.com:DQNEO/cookbook-git.git
+[submodule "site-cookbooks/emacs"]
+	path = site-cookbooks/emacs
+	url = git@github.com:DQNEO/cookbook-emacs.git
