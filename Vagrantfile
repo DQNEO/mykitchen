@@ -103,7 +103,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "emacs"
 
     # You may also specify custom JSON attributes:
-    chef.json = { :git => {:version => "1.9.0"} }
+    #chef.json = { :git => {:revision => "v1.9.0"} }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
