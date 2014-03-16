@@ -1,3 +1,3 @@
-cookbook 'yumfastestmirror', git: 'git://github.com/DQNEO/cookbook-yumfastestmirror.git'
-cookbook 'git', git: 'git://github.com/DQNEO/cookbook-git.git' 
-cookbook 'remi', git: 'git://github.com/DQNEO/cookbook-remi.git'
+cookbook 'yumfastestmirror', github: 'DQNEO/cookbook-yumfastestmirror'
+cookbook 'git', github: 'DQNEO/cookbook-git'
+cookbook 'remi', github: 'DQNEO/cookbook-remi'
