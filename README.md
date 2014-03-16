@@ -1,4 +1,4 @@
-# Chef kitchen for my development on Linux
+# Chef kitchen for DQNEO's development
 
 DQNEOのメイン開発用Kitchen
 
