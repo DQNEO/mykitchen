@@ -1,3 +1,5 @@
 cookbook 'yumfastestmirror', github: 'DQNEO/cookbook-yumfastestmirror'
 cookbook 'git', github: 'DQNEO/cookbook-git'
 cookbook 'remi', github: 'DQNEO/cookbook-remi'
+cookbook 'emacs', github: 'DQNEO/cookbook-emacs'
+cookbook 'berkshelf-minimum', github: 'DQNEO/cookbook-berkshelf-minimum'
