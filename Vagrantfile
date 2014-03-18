@@ -101,6 +101,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base"
     chef.add_recipe "base::php55"
     chef.add_recipe "emacs"
+    chef.add_recipe "zsh"
 
     # You may also specify custom JSON attributes:
     #chef.json = { :git => {:revision => "v1.9.0"} }
