@@ -8,7 +8,6 @@ Vagrant + VirtualBox で使うことを想定しています。
 ## TODO
 add development tools
 
-* zsh
 * plenv + perl
 * rbenv + ruby
 
