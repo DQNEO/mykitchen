@@ -7,6 +7,8 @@
 bash "git_submodule" do
   action :nothing
   cwd "/home/vagrant/dotfiles"
+  user 'vagrant'
+  group 'vagrant'
   code <<-COMMAND
     git submodule init && git submodule update
   COMMAND
