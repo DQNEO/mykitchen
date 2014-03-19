@@ -103,9 +103,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "remi"
     chef.add_recipe "base"
     chef.add_recipe "base::php55"
+    chef.add_recipe "base::dotfiles"
 
     # You may also specify custom JSON attributes:
     #chef.json = { :git => {:revision => "v1.9.0"} }
+    chef.json = { :mydotfiles => {:repo_url => "git://github.com/DQNEO/dotfiles.git"} }
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
