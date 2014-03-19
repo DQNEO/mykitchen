@@ -97,12 +97,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = ["cookbooks","site-cookbooks"]
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
-    chef.add_recipe "remi"
-    chef.add_recipe "base"
-    chef.add_recipe "base::php55"
     chef.add_recipe "emacs"
     chef.add_recipe "zsh"
     chef.add_recipe "base::chsh"
+    chef.add_recipe "remi"
+    chef.add_recipe "base"
+    chef.add_recipe "base::php55"
 
     # You may also specify custom JSON attributes:
     #chef.json = { :git => {:revision => "v1.9.0"} }
