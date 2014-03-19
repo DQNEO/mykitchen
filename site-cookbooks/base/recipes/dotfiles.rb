@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
 # git clone my dotfiles
+# Chefのgitリソースは大変微妙な仕様である。
+# git cloneしたあとに、
+# bashリソースでsubmodlueをごにょごにょしないといけない。
+ 
 bash "git_submodule" do
   action :nothing
   cwd "/home/vagrant/dotfiles"
@@ -12,7 +17,8 @@ git "/home/vagrant/dotfiles" do
   action :sync
   user 'vagrant'
   group 'vagrant'
-  enable_submodules true
+  # この属性はあんま意味ない
+  #enable_submodules true
   notifies :run, "bash[git_submodule]"
 end
 
