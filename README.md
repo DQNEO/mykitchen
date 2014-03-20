@@ -31,4 +31,4 @@ git clone some repos
 * php-src
 * ImageMagick(svn)
 * Ethnam
-
+* mongoose
