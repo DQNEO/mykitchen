@@ -43,7 +43,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # http://havelog.ayumusato.com/develop/server/e562-vagrant_with_chef.html
     # やたらネットワークが遅い現象の対策 (ipv6絡み)
+    # on/offどっちが速いのか諸説あり？
+    # offが速い説
     # see https://github.com/mitchellh/vagrant/issues/1172
+    # Windowsだとonが速い説
+    # see http://ooma.blog.jp/archives/vagrant-slow-internet-on-virtualbox
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
   end
