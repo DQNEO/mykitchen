@@ -59,6 +59,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base::packages"
     chef.add_recipe "base::php55"
     chef.add_recipe "base::sshkey"
+    chef.add_recipe "base::hellohtml"
+    chef.add_recipe "base::hellophp"
 
     # chef.roles_path = "../my-recipes/roles"
     # chef.data_bags_path = "../my-recipes/data_bags"
