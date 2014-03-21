@@ -12,6 +12,18 @@ bash "git_submodule" do
   code <<-COMMAND
     git submodule init && git submodule update
   COMMAND
+
+  notifies :run, "bash[make_install]"
+end
+
+bash "make_install" do
+  cwd "/home/vagrant/dotfiles"
+  user 'vagrant'
+  group 'vagrant'
+  environment "HOME" => '/home/vagrant'
+  code "/home/vagrant/dotfiles/install.sh"
+  notifies :run, "execute[install emacs packages]"
+  creates "/home/vagrant/.emacs.d"
 end
 
 git "/home/vagrant/dotfiles" do
@@ -25,10 +37,10 @@ git "/home/vagrant/dotfiles" do
 end
 
 execute "install emacs packages" do
+  action :nothing
   user "vagrant"
   group "vagrant"
   cwd "/home/vagrant"
   environment "HOME" => '/home/vagrant'
   command "emacs --batch -l /home/vagrant/.emacs.d/init.el"
-  creates "/home/vagrant/.emacs.d/vendor"
 end
