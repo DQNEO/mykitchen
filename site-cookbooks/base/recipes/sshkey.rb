@@ -4,4 +4,5 @@ bash "put id_rsa" do
     chmod 0600 /home/vagrant/.ssh/id_rsa
     chown vagrant.vagrant  /home/vagrant/.ssh/id_rsa
   EOT
+  creates '/home/vagrant/.ssh/id_rsa'
 end
