@@ -6,3 +6,10 @@ bash "put id_rsa" do
   EOT
   creates '/home/vagrant/.ssh/id_rsa'
 end
+
+template "/home/vagrant/.ssh/config" do
+  user 'vagrant'
+  group 'vagrant'
+  mode 0600
+  source 'ssh_config.erb'
+end
