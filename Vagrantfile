@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -39,6 +40,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Use VBoxManage to customize the VM
     # change memory
     vb.customize ["modifyvm", :id, "--memory", "1024"]
+
+    # http://havelog.ayumusato.com/develop/server/e562-vagrant_with_chef.html
+    # やたらネットワークが遅い現象の対策 (ipv6絡み)
+    # see https://github.com/mitchellh/vagrant/issues/1172
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
