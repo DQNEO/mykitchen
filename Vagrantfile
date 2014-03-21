@@ -70,12 +70,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base::hellohtml"
     chef.add_recipe "base::hellophp"
 
-    # chef.roles_path = "../my-recipes/roles"
-    # chef.data_bags_path = "../my-recipes/data_bags"
-    # chef.add_role "web"
+=begin
+    This is a block comment.
+
+    chef.roles_path = "../my-recipes/roles"
+    chef.data_bags_path = "../my-recipes/data_bags"
+    chef.add_role "web"
 
     # You may also specify custom JSON attributes:
-    #chef.json = { :git => {:revision => "v1.9.0"} }
+    chef.json = { :git => {:revision => "v1.9.0"} }
+=end
+
     chef.json = { :mydotfiles => {:repo_url => "git://github.com/DQNEO/dotfiles.git"} }
   end
 
