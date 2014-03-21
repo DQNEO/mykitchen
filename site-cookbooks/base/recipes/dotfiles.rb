@@ -24,3 +24,11 @@ git "/home/vagrant/dotfiles" do
   notifies :run, "bash[git_submodule]"
 end
 
+execute "install emacs packages" do
+  user "vagrant"
+  group "vagrant"
+  cwd "/home/vagrant"
+  environment "HOME" => '/home/vagrant'
+  command "emacs --batch -l /home/vagrant/.emacs.d/init.el"
+  creates "/home/vagrant/.emacs.d/vendor"
+end
