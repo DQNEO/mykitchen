@@ -4,7 +4,7 @@
 %w{
 php php-pear php-mbstring php-xml php-devel php-gd
 php-pgsql php-pdo
-php-pecl-imagick php-pecl-mongo php-pecl-memcache php-pecl-apc php-mcrypt
+php-pecl-imagick php-pecl-mongo php-pecl-memcache php-mcrypt
 }.each do |pkg|
     package pkg do
         options "--enablerepo=remi-php55,remi"
