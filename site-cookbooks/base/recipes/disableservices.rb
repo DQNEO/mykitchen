@@ -22,8 +22,9 @@ rpcsvcgssd
 udev-post
 
 iptables
-}.each do |svc|
-  service svc do
+}.each do |name|
+  service name do
     action [ :stop, :disable ]
+    only_if 'echo /etc/rc3.d/S* | grep ' + name
   end
 end
