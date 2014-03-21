@@ -75,7 +75,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base::hellophp"
 
 =begin
-    This is a block comment.
 
     chef.roles_path = "../my-recipes/roles"
     chef.data_bags_path = "../my-recipes/data_bags"
