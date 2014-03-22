@@ -4,6 +4,16 @@
 # git cloneしたあとに、
 # bashリソースでsubmodlueをごにょごにょしないといけない。
  
+git "/home/vagrant/dotfiles" do
+  repository node['mydotfiles']['repo_url']
+  action :checkout
+  user 'vagrant'
+  group 'vagrant'
+  # この属性はあんま意味ない
+  #enable_submodules true
+  notifies :run, "bash[git_submodule]"
+end
+
 bash "git_submodule" do
   action :nothing
   cwd "/home/vagrant/dotfiles"
@@ -17,6 +27,7 @@ bash "git_submodule" do
 end
 
 bash "make_install" do
+  action :nothing
   cwd "/home/vagrant/dotfiles"
   user 'vagrant'
   group 'vagrant'
@@ -24,16 +35,6 @@ bash "make_install" do
   code "/home/vagrant/dotfiles/install.sh"
   notifies :run, "execute[install emacs packages]"
   creates "/home/vagrant/.emacs.d"
-end
-
-git "/home/vagrant/dotfiles" do
-  repository node['mydotfiles']['repo_url']
-  action :sync
-  user 'vagrant'
-  group 'vagrant'
-  # この属性はあんま意味ない
-  #enable_submodules true
-  notifies :run, "bash[git_submodule]"
 end
 
 execute "install emacs packages" do
