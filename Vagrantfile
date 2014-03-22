@@ -73,6 +73,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base::sshkey"
     chef.add_recipe "base::hellohtml"
     chef.add_recipe "base::hellophp"
+    chef.add_recipe "plenv"
 
 =begin
 
