@@ -3,6 +3,7 @@ cookbook 'remi',              github: 'DQNEO/cookbook-remi'
 cookbook 'berkshelf-minimum', github: 'DQNEO/cookbook-berkshelf-minimum'
 cookbook 'httpd',             github: 'DQNEO/cookbook-httpd'
 cookbook 'timezone',          github: 'DQNEO/cookbook-timezone'
+cookbook 'git',               github: 'DQNEO/cookbook-git'
 
 # when use local cookbook
 #cookbook 'foo', path: '~/repos/mycookbooks/foo'
