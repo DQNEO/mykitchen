@@ -57,7 +57,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # some recipes and/or roles.
   config.vm.provision :chef_solo do |chef|
 
-    chef.cookbooks_path = ["cookbooks","site-cookbooks"]
+    chef.cookbooks_path = ["cookbooks","site-cookbooks", "~/repos/mycookbooks"]
+
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
