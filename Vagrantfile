@@ -60,10 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = ["cookbooks","site-cookbooks"]
     #chef.cookbooks_path = ["cookbooks","site-cookbooks", "~/repos/mycookbooks"]
 
-    chef.add_recipe "imagemagick"
-    chef.add_recipe "plenv::cpanmodules"
 
-=begin
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
@@ -80,6 +77,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "base::hellohtml"
     chef.add_recipe "base::hellophp"
     chef.add_recipe "plenv"
+    chef.add_recipe "plenv::cpanmodules"
+    chef.add_recipe "imagemagick"
+
+=begin
 
     chef.roles_path = "../my-recipes/roles"
     chef.data_bags_path = "../my-recipes/data_bags"
