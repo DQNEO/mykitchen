@@ -77,6 +77,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "plenv"
     chef.add_recipe "plenv::cpanmodules"
     chef.add_recipe "imagemagick"
+    chef.add_recipe "base::myrepos"
 
 =begin
 
