@@ -9,4 +9,6 @@ default['myrepos'] = [
      'MakeTutorial',
      'emacs',
      'Yukiwikimini-on-Ethnam',
+     'GitInternals',
+     'memcached',
      ]        
