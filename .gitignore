@@ -2,3 +2,7 @@
 /Berksfile.lock
 /.vagrant/
 /id_rsa
+
+# for imagemagick test
+/flower.jpg
+
