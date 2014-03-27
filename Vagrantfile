@@ -59,6 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     chef.cookbooks_path = ["cookbooks","site-cookbooks"]
 
+=begin
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
@@ -79,6 +80,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "imagemagick"
     chef.add_recipe "base::myrepos"
     chef.add_recipe "base::apacheconf"
+=end
 
 =begin
 
