@@ -1,7 +1,7 @@
 default['myrepos'] = [
      'minigit',
      'ethnam',
-     'mongoose',
+     'mingoose',
      'gannar',
      'cwork',
      'DQNEO',
