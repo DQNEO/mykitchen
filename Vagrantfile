@@ -39,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Use VBoxManage to customize the VM
     # change memory
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "512"]
 
     # http://havelog.ayumusato.com/develop/server/e562-vagrant_with_chef.html
     # やたらネットワークが遅い現象の対策 (ipv6絡み)
