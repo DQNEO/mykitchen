@@ -3,7 +3,7 @@ directory "/home/vagrant/repos" do
   mode '0755'
 end
 
-node['myrepos'].each do |myreponame| 
+node['myrepos'].each do |myreponame|
   repourl = 'git@github.com:DQNEO/' + myreponame + '.git'
   bash "git clone #{repourl}" do
     user 'vagrant'
