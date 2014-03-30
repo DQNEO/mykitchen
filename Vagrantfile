@@ -63,6 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
+    chef.add_recipe "git::man"
     chef.add_recipe "emacs"
     chef.add_recipe "zsh"
     chef.add_recipe "base::chsh"
