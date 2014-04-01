@@ -1,7 +1,7 @@
 cookbook 'build-essential'
 cookbook 'yumfastestmirror',  github: 'DQNEO/cookbook-yumfastestmirror'
 cookbook 'remi',              github: 'DQNEO/cookbook-remi'
-cookbook 'berkshelf-minimum', github: 'DQNEO/cookbook-berkshelf-minimum'
+#cookbook 'berkshelf-minimum', github: 'DQNEO/cookbook-berkshelf-minimum'
 cookbook 'httpd',             github: 'DQNEO/cookbook-httpd'
 cookbook 'timezone',          github: 'DQNEO/cookbook-timezone'
 
