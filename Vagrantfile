@@ -89,7 +89,7 @@ iptables
     chef.add_recipe "base::chsh"
     chef.add_recipe "httpd"
     chef.add_recipe "remi"
-    chef.add_recipe "base::disableservices"
+    chef.add_recipe "disableservices"
     chef.add_recipe "base::packages"
     chef.add_recipe "base::php55"
     chef.add_recipe "base::sshkey"
