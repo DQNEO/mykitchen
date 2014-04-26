@@ -1,17 +1,3 @@
-default['dislableservices'] = %w{
-auditd
-blk-availability
+default['disableservices'] = %w{
 ip6tables
-lvm2-monitor
-mdmonitor
-messagebus
-nfslock
-named
-netfs
-rdisc
-rpcgssd
-rpcbind
-rpcsvcgssd
-udev-post
-iptables
 }

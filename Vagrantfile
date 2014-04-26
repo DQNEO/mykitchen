@@ -59,6 +59,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     chef.cookbooks_path = ["cookbooks","site-cookbooks"]
 
+    chef.json = { :disableservices => %w{
+auditd
+blk-availability
+ip6tables
+lvm2-monitor
+mdmonitor
+messagebus
+nfslock
+named
+netfs
+rdisc
+rpcgssd
+rpcbind
+rpcsvcgssd
+udev-post
+
+iptables
+
+    } }
+
 =begin
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
