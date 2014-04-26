@@ -5,24 +5,7 @@
 # http://ry.tl/daemon.html
 # http://shogogg.hatenablog.jp/entry/20091215/1260879331
 # http://tanaka.sakura.ad.jp/archives/001065.html 
-%w{
-auditd
-blk-availability
-ip6tables
-lvm2-monitor
-mdmonitor
-messagebus
-nfslock
-named
-netfs
-rdisc
-rpcgssd
-rpcbind
-rpcsvcgssd
-udev-post
-
-iptables
-}.each do |name|
+node['dislableservices'].each do |name|
   service name do
     action [ :stop, :disable ]
     only_if 'echo /etc/rc3.d/S* | grep ' + name
