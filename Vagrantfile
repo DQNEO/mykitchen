@@ -79,17 +79,16 @@ iptables
 
     } }
 
-=begin
     chef.add_recipe "timezone"
     chef.add_recipe "yumfastestmirror"
     chef.add_recipe "git"
     chef.add_recipe "git::man"
     chef.add_recipe "emacs"
     chef.add_recipe "zsh"
-    chef.add_recipe "base::chsh"
     chef.add_recipe "httpd"
     chef.add_recipe "remi"
     chef.add_recipe "disableservices"
+    chef.add_recipe "base::chsh"
     chef.add_recipe "base::packages"
     chef.add_recipe "base::php55"
     chef.add_recipe "base::sshkey"
@@ -101,6 +100,8 @@ iptables
     chef.add_recipe "imagemagick"
     chef.add_recipe "base::myrepos"
     chef.add_recipe "base::apacheconf"
+
+=begin
 =end
 
 =begin
