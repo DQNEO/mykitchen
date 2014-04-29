@@ -1,3 +1,5 @@
+source "https://api.berkshelf.com/"
+
 cookbook 'build-essential'
 cookbook 'yumfastestmirror',  github: 'DQNEO/cookbook-yumfastestmirror'
 cookbook 'remi',              github: 'DQNEO/cookbook-remi'
