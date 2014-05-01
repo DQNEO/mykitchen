@@ -111,10 +111,10 @@ iptables
     chef.add_role "web"
 
     # You may also specify custom JSON attributes:
-    chef.json = { :git => {:revision => "v1.9.0"} }
+    chef.json = { "git" => {"revision" => "v1.9.0"} }
 =end
 
-    chef.json = { :mydotfiles => {:repo_url => "git://github.com/DQNEO/dotfiles.git"} }
+    chef.json = { "mydotfiles" => {"repo_url" => "git://github.com/DQNEO/dotfiles.git"} }
   end
 
 end
