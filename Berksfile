@@ -13,6 +13,8 @@ cookbook 'zsh',               path:   '~/repos/mycookbooks/zsh'
 cookbook 'plenv',             path:   '~/repos/mycookbooks/plenv'
 cookbook 'imagemagick',       path:   '~/repos/mycookbooks/imagemagick'
 
+cookbook 'dqneo',               path:   '~/repos/mycookbooks/dqneo'
+
 # when use local cookbook
 #cookbook 'foo', path: '~/repos/mycookbooks/foo'
 
